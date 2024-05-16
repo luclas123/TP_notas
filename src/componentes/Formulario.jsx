@@ -1,4 +1,5 @@
 import { Component } from "react";
+import Boton from "./Boton";
 
 
 export default class Formulario extends Component{
@@ -9,19 +10,31 @@ export default class Formulario extends Component{
         }
     }
 
+    manejarCambio(event){
+        this.setState({nota: event.target.value});
+    }
+
+    manejarEnvio(event){
+        event.preventDefault();
+        this.props.guardar(this.state.nota);
+        this.setState({nota: ''});
+    }
+
+
+
 
 
     render(){
        return(
-        <div className="Formulario">
-            <input
-            type="number"
-            placeholder="nota"
-            value={this.state.nota}
-            
-            ></input>
+       <form onSubmit={(event)=> this.manejarEnvio(event)}>
+        <textarea
+        value={this.state.nota}
+        onChange={(event)=> this.manejarCambio(event)}
+        placeholder="escribe la nota"
+        />
+        <Boton type="submit">Guardar Nota</Boton>
 
-        </div>
+        </form>
        )
 
     }
