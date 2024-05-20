@@ -10,15 +10,17 @@ export default class Formulario extends Component{
         }
     }
 
-    manejarCambio(event){
-        this.setState({nota: event.target.value});
+    manejarCambio = (e) => {
+        this.setState({nota: e.target.value})
     }
 
-    manejarEnvio(event){
-        event.preventDefault();
+    
+    manejarEnvio = (e) => {
+        e.preventDefault();
         this.props.guardar(this.state.nota);
-        this.setState({nota: ''});
-    }
+        this.setState({ nota: '' });
+      }
+    
 
 
 
@@ -26,13 +28,16 @@ export default class Formulario extends Component{
 
     render(){
        return(
-       <form onSubmit={(event)=> this.manejarEnvio(event)}>
-        <textarea
+       <form onSubmit= {this.manejarEnvio}>
+        <input
+        type="text"
         value={this.state.nota}
-        onChange={(event)=> this.manejarCambio(event)}
+        onChange={this.manejarCambio}
         placeholder="escribe la nota"
+        step="0.01"
+        
         />
-        <Boton type="submit">Guardar Nota</Boton>
+        <Boton accion={()=> this.props.guardar(this.state.nota)} simbolo='guardar' ></Boton>
 
         </form>
        )

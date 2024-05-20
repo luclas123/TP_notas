@@ -1,32 +1,5 @@
-/* #root{
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-  justify-content: flex-start;
-  align-items: flex-start;
-
+body{
 }
-
-/* .Contenedor{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.Formulario{
-   display: flex;
-   flex-direction: column;
-   justify-content: center;
-   background-color: blue;
-   border-radius: 15px;
-   padding: 15px 20px;
-   margin: 10px;
-}
-
-.listanotas{
-  flex: 2;
-} */
-
 .Contenedor {
   display: flex;
   flex-direction: column;
@@ -79,6 +52,9 @@ form button:hover {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   margin-top: 20px;
 }
+.listanotas .input{
+border-radius: 2;
+}
 
 .listanotas .nota {
   padding: 10px;
@@ -92,7 +68,7 @@ form button:hover {
 .listanotas .nota p {
   margin: 0;
   padding: 5px;
-  background-color: #e9ecef;
+  background-color: #000000;
   border-radius: 4px;
 }
 
@@ -104,4 +80,18 @@ form button:hover {
   .listanotas {
     padding: 10px;
   }
+}
+.promedio {
+  margin-top: 20px;
+  padding: 15px;
+  background-color: #e0f7fa;
+  border: 1px solid #00acc1;
+  border-radius: 5px;
+  text-align: center;
+  color: #00796b;
+  font-weight: bold;
+}
+
+.promedio h2 {
+  margin: 0;
 }
