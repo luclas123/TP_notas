@@ -50,7 +50,8 @@
 
           <div className='listanotas'>
             {this.state.notas.map((nota, index)=>(
-              <div className='nota' key={index}>
+              <div className='nota'key={index}>
+              
               <input
               type='number'
               onChange={(e)=> this.actualizarNota(index, e.target.value)}

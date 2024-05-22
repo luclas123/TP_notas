@@ -67,7 +67,7 @@ border-radius: 2;
 
 .listanotas .nota p {
   margin: 0;
-  padding: 5px;
+  padding: 10px;
   background-color: #000000;
   border-radius: 4px;
 }
@@ -80,6 +80,15 @@ border-radius: 2;
   .listanotas {
     padding: 10px;
   }
+}
+
+
+.listanotas .nota.rojo {
+  background-color: red;
+}
+
+.listanotas .nota.verde {
+  background-color: green;
 }
 .promedio {
   margin-top: 20px;
