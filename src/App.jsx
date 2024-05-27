@@ -1,6 +1,7 @@
   import { Component } from 'react'
   import './App.css';
   import Formulario from './componentes/Formulario';
+import Boton from './componentes/Boton';
 
 
 
@@ -26,6 +27,12 @@
           notas: nuevasNotas,
           promedio: promedio
         }
+      });
+    }
+
+    eliminarNotas = () =>{
+      this.setState({notas: [],
+        promedio: 0  
       });
     }
 
@@ -64,6 +71,7 @@
           <div className='promedio'>
             <h2>Promedio: {this.state.promedio.toFixed(2)}</h2>
           </div>
+          <Boton onClick={this.eliminarNotas}>Eliminar Notas</Boton>
         </div>
 
       )

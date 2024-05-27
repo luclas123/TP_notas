@@ -37,8 +37,8 @@ export default class Formulario extends Component{
         step="0.01"
         
         />
-        <Boton accion={()=> this.props.guardar(this.state.nota)} Children='guardar' ></Boton>
-
+        <Boton accion={()=> this.props.guardar(this.state.nota)}>guardar</Boton>
+      
         </form>
        )
 
